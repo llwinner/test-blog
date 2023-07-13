@@ -16,6 +16,13 @@ faucet:
   coins:
   - 5token
   - 100000stake
+  port: 4502
 validators:
 - name: alice
   bonded: 100000000stake
+  config:
+    consensus:
+      create_empty_blocks: false
+      create_empty_blocks_interval: "2s"
+    rpc:
+      laddr: "tcp://0.0.0.0:26661"
